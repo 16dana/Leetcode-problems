@@ -1,0 +1,45 @@
+import java.util.*;
+class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        String s="";
+        int n=sc.nextInt();
+        int n2=sc.nextInt();
+        
+        int i=0;
+    
+        if(n>n2)
+        {
+            for(i=0;i<n2;i++)
+            {
+                s=s+"b";
+                s=s+"g";
+                
+            }
+            for(i=n2;i<n;i++)
+            {
+                s=s+"b";
+            }
+        }
+        else
+        {
+            for(i=0;i<n;i++)
+            {
+                s=s+"g";
+                s=s+"b";
+                
+            }
+            for(i=n;i<n2;i++)
+            {
+                s=s+"g";
+            }
+        }
+        System.out.println(s);
+        
+        
+        
+    
+    }
+}
