@@ -1,0 +1,51 @@
+4)
+Problem statement
+Akhil created a whatsapp group decided to say hello to everybody. Akhil typed the word s. It is considered that Akhil managed to say hello if several letters can be deleted from the typed word so that it resulted in the word "hello". For example, if Akhil types the word "ahhellllloou", it will be considered that he said hello, and if he types "hlelo", it will be considered that Akhil got misunderstood and he didn't manage to say hello. Determine whether Akhil managed to say hello by the given word s.
+Input Format
+The first and only line contains the word s, which akhil typed. This word consisits of small Latin letters, its length is no less that 1 and no more than 100 letters.
+Output Format
+If Akhil managed to say hello, print "YES", otherwise print "NO".
+Constraints
+0<k<=30
+0<N<=30
+0<=a[i]<=500
+**Sample Input **
+ahhellllloou
+yes
+Explanation:
+If any possible way to get ‘hello’ in same order and even if there are any letters between those letters then we can print YES. Otherwise print NO
+2
+
+import java.util.*;
+class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        String s="hello";
+        String s1="";
+        int j=0;
+        int i=0;
+        s1=sc.nextLine();
+        for(i=0;i<s1.length();i++)
+        {
+            if(s.charAt(j)==s1.charAt(i))
+            {
+                j=j+1;
+                if(j==s.length())
+                {
+                    break;
+                }
+            }
+        }
+        if(j==s.length())
+        {
+            System.out.println("yes");
+        }
+    }
+}
+
+        
+        
+        
+        
